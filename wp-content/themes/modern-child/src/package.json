@@ -1,0 +1,30 @@
+{
+    "name": "delas-project",
+    "version": "1.0.0",
+    "description": "Projeto do site Delas, projeto de TCC de Radio e TV da Unesp de Bauru, 2016.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hugocica/delas-project.git"
+    },
+    "author": "Hugo Cicarelli",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hugocica/delas-project/issues"
+    },
+    "homepage": "https://github.com/hugocica/delas-project#readme",
+    "devDependencies": {
+        "gulp": "~3.2.4",
+        "gulp-jshint": "~1.3.4",
+        "gulp-uglify": "~0.1.0",
+        "gulp-sass": "~0.2.3",
+        "gulp-imagemin": "~0.1.1"
+    },
+    "engines": {
+        "node": ">=0.8.0",
+        "npm": ">=1.1.0"
+    }
+}
