@@ -3,32 +3,38 @@ body {
 
 	#page {
 		.site-inner {
-			#site-navigation {
-				.main-navigation-inner {
-					#labrys-menu-logo {
-						display: inline-block;
-						vertical-align: middle;
+			nav {
+				&#site-navigation {
+					.main-navigation-inner {
+						#labrys-menu-logo {
+							display: inline-block;
+							vertical-align: middle;
 
-						svg {
-							// width: 76px;
-							width: 100%;
-						}
-					}
-					.menu {
-						display: inline-block;
-						vertical-align: middle;
-
-						li {
-							a {
-								font-family: 'Roboto Condensed';
-								font-size: 24px;
-								text-transform: lowercase;
+							svg {
+								// width: 76px;
+								width: 100%;
 							}
 						}
+						.menu {
+							display: inline-block;
+							vertical-align: middle;
+
+							li {
+								a {
+									font-family: 'Roboto Condensed';
+									font-size: 24px;
+									text-transform: lowercase;
+								}
+							}
+						}
+						#nav-search-form {
+							text-align: right;
+						}
 					}
-					#nav-search-form {
-						text-align: right;
-					}
+				}
+				&#editais-navigation {
+					top: 85px;
+					background-color: #8e518d;
 				}
 			}
 		}

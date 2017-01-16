@@ -1164,6 +1164,14 @@
 						'echo'            => false,
 						'items_wrap'      => '<ul>%3$s</ul>',
 					) );
+				$other_args = apply_filters( 'wmhook_wm_navigation_args', array(
+						'theme_location'  => 'editorial',
+						'container'       => 'div',
+						'container_class' => 'menu col-md-12',
+						'menu_class'      => 'menu', //fallback for pagelist
+						'echo'            => false,
+						'items_wrap'      => '<ul>%3$s</ul>',
+					) );
 
 			//Preparing output
 				$output .= '<nav id="site-navigation" class="main-navigation" role="navigation"' . wm_schema_org( 'SiteNavigationElement' ) . '>';
@@ -1279,6 +1287,9 @@
 						$output .= '<div id="nav-search-form" class="nav-search-form col-md-1"><a href="#" id="search-toggle" class="search-toggle"><span class="screen-reader-text">' . _x( 'Search', 'Display search form button title.', 'wm_domain' ) . '</span></a>' . get_search_form( false ) . '</div>';
 					$output .= '</div>';
 					$output .= '<button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">' . _x( 'Menu', 'Mobile navigation toggle button title.', 'wm_domain' ) . '</button>';
+				$output .= '</nav>';
+				$output .= '<nav id="editais-navigation" class="secondary-navigation main-navigation" role="navigation"' . wm_schema_org( 'SiteNavigationElement' ) . '>';
+					$output .= wp_nav_menu( $other_args );
 				$output .= '</nav>';
 
 			//Output

@@ -35,4 +35,9 @@ function my_theme_enqueue_styles() {
 // Escondendo a barra de admin do front-end
 show_admin_bar( false );
 
+add_action( 'after_setup_theme', 'register_editorial_menu' );
+function register_editorial_menu() {
+  register_nav_menu( 'editorial', __( 'Editorial Menu', 'modern-child' ) );
+}
+
 ?>
