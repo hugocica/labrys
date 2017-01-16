@@ -1,0 +1,36 @@
+body {
+	background-color: #fff !important;
+
+	#page {
+		.site-inner {
+			#site-navigation {
+				.main-navigation-inner {
+					#labrys-menu-logo {
+						display: inline-block;
+						vertical-align: middle;
+
+						svg {
+							// width: 76px;
+							width: 100%;
+						}
+					}
+					.menu {
+						display: inline-block;
+						vertical-align: middle;
+
+						li {
+							a {
+								font-family: 'Roboto Condensed';
+								font-size: 24px;
+								text-transform: lowercase;
+							}
+						}
+					}
+					#nav-search-form {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}
