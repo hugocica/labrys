@@ -919,7 +919,8 @@
 					}
 
 				//Enable hiding site navigation and footer credits on down scroll
-					$body_classes['downscroll-enabled'] = ++$i;
+					// $body_classes['downscroll-enabled'] = ++$i;
+					$body_classes['downscroll-enabled'] = false;
 
 			//Output
 				$body_classes = array_filter( (array) apply_filters( 'wmhook_wm_body_classes_output', $body_classes ) );

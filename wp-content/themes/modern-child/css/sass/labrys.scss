@@ -37,6 +37,13 @@ body {
 					background-color: #8e518d;
 				}
 			}
+			#site-banner {
+				.site-banner-inner {
+					.site-banner-content {
+						height: 650px;
+					}
+				}
+			}
 		}
 	}
 }
