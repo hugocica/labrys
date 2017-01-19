@@ -55,9 +55,7 @@ body {
 
 							li {
 								a {
-									font-family: 'Offside';
 									font-size: 24px;
-									text-transform: lowercase;
 								}
 							}
 						}
@@ -82,11 +80,20 @@ body {
 
 						li {
 							a {
-								font-family: 'Offside';
 								font-size: 20px;
-								text-transform: lowercase;
 								line-height: 50px;
 							}
+						}
+					}
+				}
+				.menu {
+					li {
+						&.current-menu-item {
+
+						}
+						a {
+							text-transform: lowercase;
+							font-family: 'Offside';
 						}
 					}
 				}
