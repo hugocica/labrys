@@ -1070,7 +1070,7 @@
 	if ( ! function_exists( 'wm_site_top' ) ) {
 		function wm_site_top() {
 			//Helper variables
-				$output  = '<div id="page" class="hfeed site">' . "\r\n";
+				$output  = '<div id="page" class="hfeed site container">' . "\r\n";
 				$output .= "\t" . '<div class="site-inner">' . "\r\n";
 
 			//Output
@@ -1108,7 +1108,7 @@
 	if ( ! function_exists( 'wm_header_top' ) ) {
 		function wm_header_top() {
 			//Preparing output
-				$output = "\r\n\r\n" . '<header id="masthead" class="site-header" role="banner"' . wm_schema_org( 'WPHeader' ) . '>' . "\r\n\r\n";
+				$output = "\r\n\r\n" . '<header id="masthead" class="site-header container" role="banner"' . wm_schema_org( 'WPHeader' ) . '>' . "\r\n\r\n";
 
 			//Output
 				echo $output;
@@ -1160,7 +1160,7 @@
 				$args = apply_filters( 'wmhook_wm_navigation_args', array(
 						'theme_location'  => 'primary',
 						'container'       => 'div',
-						'container_class' => 'menu col-md-10',
+						'container_class' => 'menu col-md-9',
 						'menu_class'      => 'menu', //fallback for pagelist
 						'echo'            => false,
 						'items_wrap'      => '<ul>%3$s</ul>',
@@ -1178,10 +1178,10 @@
 				$output .= '<nav id="site-navigation" class="main-navigation" role="navigation"' . wm_schema_org( 'SiteNavigationElement' ) . '>';
 					$output .= '<span class="screen-reader-text">' . sprintf( __( '%s site navigation', 'wm_domain' ), get_bloginfo( 'name' ) ) . '</span>';
 					$output .= wm_accessibility_skip_link( 'to_content' );
-					$output .= '<div class="main-navigation-inner col-md-12">';
-						$output .= '<div id="labrys-menu-logo" class="col-md-1">
+					$output .= '<div class="main-navigation-inner container">';
+						$output .= '<div id="labrys-menu-logo" class="col-md-2">
 										<a href="'. site_url() .'">
-											<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 84.4 95.5" style="enable-background:new 0 0 84.4 95.5;" xml:space="preserve">
 											<style type="text/css">
 												.st0{clip-path:url(#XMLID_298_);}
@@ -1290,7 +1290,9 @@
 					$output .= '<button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">' . _x( 'Menu', 'Mobile navigation toggle button title.', 'wm_domain' ) . '</button>';
 				$output .= '</nav>';
 				$output .= '<nav id="editais-navigation" class="secondary-navigation main-navigation" role="navigation"' . wm_schema_org( 'SiteNavigationElement' ) . '>';
-					$output .= wp_nav_menu( $other_args );
+					$output .= '<div class="container">';
+						$output .= wp_nav_menu( $other_args );
+					$output .= '</div>';
 				$output .= '</nav>';
 
 			//Output
@@ -1493,7 +1495,7 @@
 	if ( ! function_exists( 'wm_content_top' ) ) {
 		function wm_content_top() {
 			//Helper variables
-				$output  = "\r\n\r\n" . '<div id="content" class="site-content">';
+				$output  = "\r\n\r\n" . '<div id="content" class="site-content container">';
 				$output .= "\r\n\r\n" . wm_get_breadcrumbs();
 				$output .= "\r\n\t"   . '<div id="primary" class="content-area">';
 				$output .= "\r\n\t\t" . '<main id="main" class="site-main clearfix" role="main">' . "\r\n\r\n";
@@ -1921,8 +1923,8 @@
 				get_sidebar( 'footer' );
 
 			//Credits
-				echo '<div class="site-footer-area footer-area-site-info">';
-					echo '<div class="site-info-container col-md-12">';
+				echo '<div class="site-footer-area footer-area-site-info container">';
+					echo '<div class="site-info-container">';
 						echo 	'<div class="col-md-4">
 									<div class="svg-container">
 										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

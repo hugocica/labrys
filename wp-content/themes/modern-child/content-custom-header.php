@@ -40,5 +40,4 @@
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/casa-labrys.png" title="Casa de Labrys" alt="Casa de Labrys">
 		
 	</div>
-
 </div>
