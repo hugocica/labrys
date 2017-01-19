@@ -35,6 +35,29 @@
 
 			wmhook_footer_after();
 
+			echo '<div id="copyright-container">
+						<div class="container">
+							<div class="cr-box col-md-8 col-sm-6">';
+								
+								if ( date('Y') != '2017' )
+									$date_range = '-' . date('Y');
+								
+								echo '<p>© COPYRIGHT 2016'. $date_range .' Casa de Labrys TODOS OS DIREITOS RESERVADOS.</p>
+								<div class="support-div"></div>
+							</div>
+							<div class="dev-container col-md-4 col-sm-5">
+								<p>Desenvolvido por:</p>
+								<div class="dev-box">
+									<a href="https://github.com/hugocica/" target="_blank">
+										<i class="fa fa-github" aria-hidden="true"></i>
+										<span>Hugo Cicarelli</span>
+									</a>
+								</div>
+								<div class="support-div"></div>
+							</div>
+						</div>
+					</div>';
+
 	} // /wmhook_disable_footer
 
 
