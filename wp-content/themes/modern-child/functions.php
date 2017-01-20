@@ -1,8 +1,8 @@
 <?php
 
 // Incluindo arquivos de estilo
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-function my_theme_enqueue_styles() {
+add_action( 'wp_enqueue_scripts', 'labrys_enqueue_styles' );
+function labrys_enqueue_styles() {
     $parent_style = 'modern-style';
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style',
@@ -10,7 +10,7 @@ function my_theme_enqueue_styles() {
         array( $parent_style ),
         wp_get_theme()->get('Version')
     );
-    wp_enqueue_style( 'labrys', 
+    wp_enqueue_style( 'labrys-style', 
     	get_stylesheet_directory_uri() . '/css/labrys.css',
     	array( $parent_style ), 
     	wp_get_theme()->get('Version')
@@ -31,6 +31,23 @@ function my_theme_enqueue_styles() {
     // 	wp_get_theme()->get('Version')
     // );
 }
+// Incluindo arquivos scripts js
+add_action( 'wp_enqueue_scripts', 'labrys_enqueue_scripts' );
+function labrys_enqueue_scripts() {
+    wp_enqueue_script( 'labrys-scripts', 
+        get_stylesheet_directory_uri() . '/js/functions.js', 
+        array ( 'jquery' ), 
+        wp_get_theme()->get('Version'), 
+        true
+    );
+    wp_enqueue_script( 'imagesloaded', 
+        get_stylesheet_directory_uri() . '/js/imagesloaded.pkgd.min.js', 
+        array ( 'jquery' ), 
+        wp_get_theme()->get('Version'), 
+        true
+    );
+}
+
 
 // Escondendo a barra de admin do front-end
 show_admin_bar( false );

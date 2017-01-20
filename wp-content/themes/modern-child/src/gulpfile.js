@@ -19,6 +19,7 @@ gulp.task( 'sass', function () {
 	// Compile all SCSS files.
 	gulp.src( dirs.sass + '/*.scss' )
 		.pipe( sass({
+			compass: true,
 			outputStyle: 'compressed'
 		}) )
 		.pipe( gulp.dest( dirs.css ) );
