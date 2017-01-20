@@ -1923,7 +1923,7 @@
 				get_sidebar( 'footer' );
 
 			//Credits
-				echo '<div class="site-footer-area footer-area-site-info container">';
+				echo '<div class="site-footer-area footer-area-site container">';
 					echo '<div class="site-info-container">';
 						echo 	'<div class="col-md-4">
 									<div class="svg-container">

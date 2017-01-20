@@ -145,13 +145,13 @@ jQuery( function() {
 
 					var $galleryContainers = jQuery( '.gallery' );
 
-					// $galleryContainers.imagesLoaded( function() {
+					$galleryContainers.imagesLoaded( function() {
 
-					// 	$galleryContainers.masonry( {
-					// 			itemSelector : '.gallery-item'
-					// 		} );
+						$galleryContainers.masonry( {
+								itemSelector : '.gallery-item'
+							} );
 
-					// } );
+					} );
 
 			} // /masonry
 
@@ -205,13 +205,13 @@ jQuery( function() {
 
 				var $footerWidgets = jQuery( '#footer-widgets-container' );
 
-				// $footerWidgets.imagesLoaded( function() {
+				$footerWidgets.imagesLoaded( function() {
 
-				// 	$footerWidgets.masonry( {
-				// 			itemSelector : '.widget'
-				// 		} );
+					$footerWidgets.masonry( {
+							itemSelector : '.widget'
+						} );
 
-				// } );
+				} );
 
 			} // /masonry
 
@@ -334,29 +334,29 @@ jQuery( function() {
 			 *
 			 * Only after images are loaded and when resizing the window (excerpt mobiles).
 			 */
-			// $columnHeightContainers.imagesLoaded( function() {
+			$columnHeightContainers.imagesLoaded( function() {
 
-			// 	/**
-			// 	 * Reusable columns height responsive function
-			// 	 */
-			// 	function wmSetColumnHeightWrapper () {
-			// 		if ( 640 < document.body.clientWidth ) {
-			// 			$columnHeightContainers.each( function() {
-			// 				wmSetColumnHeight( jQuery( this ) );
-			// 			} );
-			// 		}
-			// 	} // /wmSetColumnHeightWrapper
+				/**
+				 * Reusable columns height responsive function
+				 */
+				function wmSetColumnHeightWrapper () {
+					if ( 640 < document.body.clientWidth ) {
+						$columnHeightContainers.each( function() {
+							wmSetColumnHeight( jQuery( this ) );
+						} );
+					}
+				} // /wmSetColumnHeightWrapper
 
-			// 	wmSetColumnHeightWrapper();
+				wmSetColumnHeightWrapper();
 
-			// 	jQuery( window ).on( 'resize orientationchange', function( e ) {
-			// 		//Reset the column height first
-			// 			jQuery( '.posts article' ).css( { height : 'auto' } );
+				jQuery( window ).on( 'resize orientationchange', function( e ) {
+					//Reset the column height first
+						jQuery( '.posts article' ).css( { height : 'auto' } );
 
-			// 		wmSetColumnHeightWrapper();
-			// 	} );
+					wmSetColumnHeightWrapper();
+				} );
 
-			// } );
+			} );
 
 
 
@@ -374,9 +374,9 @@ jQuery( function() {
 				 * Set posts columns height
 				 */
 
-					// jQuery( '.posts .infinite-wrap' ).imagesLoaded( function() {
-					// 	wmSetColumnHeight( jQuery( $infiniteScrollPageID ) );
-					// } );
+					jQuery( '.posts .infinite-wrap' ).imagesLoaded( function() {
+						wmSetColumnHeight( jQuery( $infiniteScrollPageID ) );
+					} );
 
 
 
