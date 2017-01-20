@@ -36,6 +36,10 @@
 	wp_head();
 
 ?>
+	<meta property="og:site_name" content="Casa de Labrys">
+	<meta property="og:description" content="Jornalismo colaborativo, com recorte de gênero, raça, classe e sexualidade. Ecoamos nossas vozes contra a invisibilidade lésbica e toda forma de opressão.">
+	<meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png">
+
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Offside" rel="stylesheet">
