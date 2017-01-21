@@ -84,6 +84,10 @@ body {
     							font-size: 25px;
 							}
 						}
+						#menu-search-form {
+							position: relative;
+							top: 25%;
+						}
 					}
 				}
 				&#editais-navigation {
@@ -232,14 +236,10 @@ body {
 	}
 }
 
-input[type="text"] {
-	-webkit-appearance: none;
-	outline: none;
-	border: none;
-}
-
 .search-wrap {
-	position: relative;
+	// position: relative;
+	position: absolute;
+	right: 0;
 	display: block;
 	z-index: 1;
 	width: 40px;
@@ -248,7 +248,13 @@ input[type="text"] {
 	padding: 0;
 	border: 2px solid white;
 	border-radius: 20px;
-	// @include transition(all .25s ease .3s);
+	transition: all .25s ease .3s;
+
+	input[type="text"] {
+		-webkit-appearance: none;
+		outline: none;
+		border: none;
+	}
 	&:before {
 		@extend %bfaf;
 		top: 90%; 
@@ -257,9 +263,9 @@ input[type="text"] {
 		height: 2px;
 		background-color: white;
 		border-radius: 1px;
-		// @include transition(width .15s ease .55s);
-		// @include transform(rotate(45deg));
-		// @include transform-origin(top, left);
+		transition: width .15s ease .55s;
+		transform: rotate(45deg);
+		transform-origin: top left;
 	}
 	input {
 		width: 100%;
@@ -269,7 +275,7 @@ input[type="text"] {
 		line-height: 38px;
 		opacity: 0;
 		background-color: transparent;
-		// @include transition(opacity .15s ease);
+		transition: opacity .15s ease;
 	}
 }
 
@@ -282,41 +288,41 @@ input[type="text"] {
 	width: 30px;
 	height: 30px;
 	cursor: pointer;	
-	// @include transform(translateY(-50%));
+	transform: translateY(-50%);
 	&:before, &:after {
 		@extend %bfaf;
 		right: 5px;
 		height: 2px;
 		width: 2px;
 		border-radius: 1px;
-		// @include transition(all .25s ease);
+		transition: all .25s ease;
 	}
 	&:before {
 		top: 0px;
 		background-color: white;
-		// @include transform(rotate(-45deg));
-		// @include transform-origin(top, right);
-		// @include transition-delay(.1s);
+		transform: rotate(-45deg);
+		transform-origin: top right;
+		transition-delay: .1s;
 	}
 	&:after {
 		bottom: 0px;
 		background-color: white;
-		// @include transform(rotate(45deg));
-		// @include transform-origin(bottom, right);
-		// @include transition-delay(0s);
+		transform: rotate(45deg);
+		transform-origin: bottom right;
+		transition-delay: 0s;
 	}
 }
 
 .search-wrap.open {
 	width: 160px;
-	// @include transition-delay(.1s);
+	transition-delay: .1s;
 	&:before { // search nub
 		width: 0px;
-		// @include transition-delay(0s);
+		transition-delay: 0s;
 	}
 	input {
 		opacity: 1;
-		// @include transition-delay(.15s);
+		transition-delay: .15s;
 	}
 	.eks {
 		&:before, &:after {
@@ -325,11 +331,11 @@ input[type="text"] {
 		}
 		&:before {
 			top: 9px;
-			// @include transition-delay(.25s);
+			transition-delay: .25s;
 		}
 		&:after {
 			bottom: 9px;
-			// @include transition-delay(.3s);
+			transition-delay: .3s;
 		}
 	}
 }

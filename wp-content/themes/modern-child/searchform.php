@@ -11,7 +11,7 @@
 
 ?>
 
-<form method="get" class="" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form method="get" id="menu-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div class="search-wrap" js-ui-search>
 		<input type="text" / js-ui-text>
 		<span type="search" value="" placeholder="<?php _e( 'Search field: type and press enter', 'wm_domain' ); ?>" name="s" class="eks" js-ui-close></span>

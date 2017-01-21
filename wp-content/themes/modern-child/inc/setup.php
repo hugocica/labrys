@@ -1285,7 +1285,7 @@
 										</a>
 									</div>';
 						$output .= wp_nav_menu( $args );
-						$output .= '<div id="nav-search-form" class="nav-search-form col-md-1"><a href="#" id="search-toggle" class="search-toggle"><span class="screen-reader-text">' . _x( 'Search', 'Display search form button title.', 'wm_domain' ) . '</span></a>' . get_search_form( false ) . '</div>';
+						$output .= '<div id="nav-search-form" class="nav-search-form col-md-1">' . get_search_form( false ) . '</div>';
 					$output .= '</div>';
 					$output .= '<button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">' . _x( 'Menu', 'Mobile navigation toggle button title.', 'wm_domain' ) . '</button>';
 				$output .= '</nav>';
