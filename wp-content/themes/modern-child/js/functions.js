@@ -7,9 +7,9 @@ jQuery(document).ready(function($){
 	$close.on('click', function(){
 		$wrap.toggleClass('open');
 	});
-	console.log('vish');
+	
 	$input.on('transitionend webkitTransitionEnd oTransitionEnd', function(){
-		console.log('triggered end animation');
+		
 		if ($wrap.hasClass('open')) {
 			$input.focus();
 		} else {

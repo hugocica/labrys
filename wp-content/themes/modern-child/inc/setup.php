@@ -1168,7 +1168,7 @@
 				$other_args = apply_filters( 'wmhook_wm_navigation_args', array(
 						'theme_location'  => 'editorial',
 						'container'       => 'div',
-						'container_class' => 'menu col-md-12',
+						'container_class' => 'menu col-md-10',
 						'menu_class'      => 'menu', //fallback for pagelist
 						'echo'            => false,
 						'items_wrap'      => '<ul>%3$s</ul>',
@@ -1290,7 +1290,7 @@
 					$output .= '<button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">' . _x( 'Menu', 'Mobile navigation toggle button title.', 'wm_domain' ) . '</button>';
 				$output .= '</nav>';
 				$output .= '<nav id="editais-navigation" class="secondary-navigation main-navigation" role="navigation"' . wm_schema_org( 'SiteNavigationElement' ) . '>';
-					$output .= '<div class="container">';
+					$output .= '<div class="container"><div class="col-md-2"></div>';
 						$output .= wp_nav_menu( $other_args );
 					$output .= '</div>';
 				$output .= '</nav>';
@@ -2066,10 +2066,10 @@
 									</div>
 								</div>';
 						echo 	'<div class="col-md-4">
-									<div class="fb-page" data-href="https://www.facebook.com/CasadeLabrys/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/CasadeLabrys/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CasadeLabrys/">Casa de Labrys</a></blockquote></div>
-								</div>';
-						echo 	'<div class="col-md-4">
 									
+								</div>';
+						echo 	'<div class="col-md-4" style="text-align: right;">
+									<div class="fb-page" data-href="https://www.facebook.com/CasadeLabrys/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/CasadeLabrys/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CasadeLabrys/">Casa de Labrys</a></blockquote></div>
 								</div>';
 					echo '</div>';
 				echo '</div>';

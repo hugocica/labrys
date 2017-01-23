@@ -2,6 +2,11 @@
 
 $labrys-purple: #7452a2;
 
+%bfaf {
+	content: "";
+	position: absolute;
+	display: block;
+}
 * { box-sizing: border-box; }
 html, body {
 	// @include display-flex;
@@ -61,7 +66,8 @@ body {
 							vertical-align: middle;
 
 							svg {
-								height: 85px;
+								// height: 85px;
+								height: 60px;
 							}
 						}
 						.menu {
@@ -70,13 +76,14 @@ body {
 
 							li {
 								a {
-									font-size: 24px;
+									font-size: 20px;
 								}
 							}
 						}
 						#nav-search-form {
 							text-align: right;
 							height: 91px;
+							padding-right: 25px;
 
 							#search-toggle {
 								position: absolute;
@@ -87,6 +94,7 @@ body {
 						#menu-search-form {
 							position: relative;
 							top: 25%;
+							height: 50px;
 						}
 					}
 				}
@@ -95,7 +103,7 @@ body {
 					background-color: $labrys-purple;
 
 					.menu {
-						padding: 0 30px;
+						// padding: 0 30px;
 
 						li {
 							a {
@@ -107,12 +115,17 @@ body {
 				}
 				.menu {
 					li {
-						&.current-menu-item {
+						line-height: 3.82;
 
+						&.current-menu-item {
+							&:after {
+								@extend %bfaf;
+							}
 						}
 						a {
-							text-transform: lowercase;
-							font-family: 'Offside';
+							text-transform: uppercase;
+							font-family: 'Open Sans Condensed';
+							font-weight: 700;
 						}
 					}
 				}
@@ -137,6 +150,44 @@ body {
 						    margin: 0 auto;
 						    position: relative;
 						    top: 260px;
+						}
+					}
+				}
+			}
+			#content {
+				#main {
+					#posts {
+						article {
+							.entry-media {
+								.post-thumbnail {
+								    height: 270px;
+								    background-repeat: no-repeat;
+								    background-size: cover;
+								    background-position: 50%;
+								}
+							}
+							.entry-category {
+								background-color: $labrys-purple;
+								width: 80%;
+								height: 35px;
+								margin: 0 auto;
+								position: relative;
+								top: -(35px / 2);
+								padding: 5px;
+
+								h3 {
+									margin: 0;
+									font-family: 'Offside';
+									font-size: 20px;
+									font-weight: 300;
+									color: #fff;
+									text-align: center;
+									text-transform: lowercase;
+								}
+							}
+							.entry-inner {
+								padding: 20px 30px;
+							}
 						}
 					}
 				}
@@ -244,11 +295,11 @@ body {
 	right: 0;
 	display: block;
 	z-index: 1;
-	width: 40px;
-	height: 40px;
+	width: 25px;
+	height: 25px;
 	margin-left: 0;
 	padding: 0;
-	border: 2px solid white;
+	border: 3px solid white;
 	border-radius: 20px;
 	transition: all .25s ease .3s;
 	-webkit-transition: all .25s ease .3s;
@@ -264,8 +315,8 @@ body {
 		@extend %bfaf;
 		top: 90%; 
 		left: 90%;
-		width: 16px;
-		height: 2px;
+		width: 12px;
+		height: 3px;
 		background-color: white;
 		border-radius: 1px;
 		transition: width .15s ease .55s;
@@ -346,10 +397,4 @@ body {
 			transition-delay: .3s;
 		}
 	}
-}
-
-%bfaf {
-	content: "";
-	position: absolute;
-	display: block;
 }
