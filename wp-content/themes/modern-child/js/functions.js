@@ -1,5 +1,6 @@
 jQuery(document).ready(function($){
 	
+	// search icon animation
 	var $wrap = $('[js-ui-search]');
 	var $close = $('[js-ui-close]');
 	var $input = $('[js-ui-text]');
@@ -16,4 +17,9 @@ jQuery(document).ready(function($){
 			return;
 		}
 	});
+
+	// show submenu Editoriais
+	if ( $('#site-navigation .menu ul').children('li:first-of-type').hasClass('current-menu-item') ) {
+		$('#editais-navigation').addClass('open');
+	}
 });

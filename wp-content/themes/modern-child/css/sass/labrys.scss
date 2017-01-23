@@ -60,6 +60,10 @@ body {
 		.site-inner {
 			nav {
 				&#site-navigation {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					height: 75px;
+
 					.main-navigation-inner {
 						#labrys-menu-logo {
 							display: inline-block;
@@ -67,7 +71,7 @@ body {
 
 							svg {
 								// height: 85px;
-								height: 60px;
+								height: 55px;
 							}
 						}
 						.menu {
@@ -82,7 +86,7 @@ body {
 						}
 						#nav-search-form {
 							text-align: right;
-							height: 91px;
+							height: 65px;
 							padding-right: 25px;
 
 							#search-toggle {
@@ -99,9 +103,13 @@ body {
 					}
 				}
 				&#editais-navigation {
-					top: 91px;
+					top: 75px;
 					background-color: $labrys-purple;
+					display: none;
 
+					&.open {
+						display: block;
+					}
 					.menu {
 						// padding: 0 30px;
 
@@ -115,7 +123,7 @@ body {
 				}
 				.menu {
 					li {
-						line-height: 3.82;
+						line-height: 3;
 
 						&.current-menu-item {
 							&:after {
@@ -371,8 +379,9 @@ body {
 	}
 	&.open {
 		width: 200px;
-		height: 40px;
+		height: 30px;
 		transition-delay: .1s;
+
 		&:before { // search nub
 			width: 0px;
 			transition-delay: 0s;
