@@ -21,12 +21,25 @@ jQuery(document).ready(function($){
 		}
 	});
 
-	// show submenu Editoriais
+	// if the window width is more than 768px
 	if ( $(window).width() > tablet_width ) {
+		// show submenu Editoriais
 		if ( $('#site-navigation .menu ul').children('li:first-of-type').hasClass('current-menu-item') ) {
 			$('#editais-navigation').addClass('open');
 		}
 	} else {
+		// fix the menu navbar to the end of the screen
 		$('body #page .site-inner .site-header nav#site-navigation').css({ bottom: $(window).height() });
+
+		$('#site-navigation .menu ul').children('li:first-of-type')
+									  .removeClass('current-menu-item')
+									  .removeClass('active-menu-item')
+									  .children('a')
+									  .removeAttr('href');
+		$('#site-navigation .menu ul').children('li:first-of-type').unbind('click').click(function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			$('#editais-navigation').addClass('open');
+		});
 	}
 });

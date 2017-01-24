@@ -164,15 +164,33 @@ body {
 						&.open {
 							display: block;
 						}
-						.menu {
-							// padding: 0 30px;
+						.container {
+							.menu {
+								// padding: 0 30px;
 
-							li {
-								a {
-									font-size: 20px;
-									line-height: 50px;
+								li {
+									a {
+										font-size: 20px;
+										line-height: 50px;
+									}
+
+									@include phone {
+										display: block;
+									}
 								}
 							}
+
+							@include phone {
+								background-color: #7452a2;
+							}
+						}
+
+						@include phone {
+						    position: fixed;
+						    top: 0;
+						    width: 100%;
+						    height: 100%;
+						    background-color: rgba(0, 0, 0, 0.4);
 						}
 					}
 					.menu {
@@ -243,50 +261,52 @@ body {
 						margin-top: 0;
 					}
 				}
-				#content {
-					#main {
-						#posts {
-							article {
-								.entry-media {
-									.post-thumbnail {
-									    height: 270px;
-									    background-repeat: no-repeat;
-									    background-size: cover;
-									    background-position: 50%;
-									}
-								}
-								.entry-category {
-									background-color: $labrys-purple;
-									width: 80%;
-									height: 35px;
-									margin: 0 auto;
-									position: relative;
-									top: -(35px / 2);
-									padding: 5px;
 
-									h3 {
-										margin: 0;
-										font-family: 'Offside';
-										font-size: 20px;
-										font-weight: 300;
-										color: #fff;
-										text-align: center;
-										text-transform: lowercase;
-									}
-								}
-								.entry-inner {
-									padding: 20px 30px;
-								}
-							}
-						}
-					}
-				}
 				@include phone {
 					padding-right: 0;
 					padding-left: 0;
 				}
 			}
+			#content {
+				#main {
+					#posts {
+						article {
+							.entry-media {
+								.post-thumbnail {
+								    height: 270px;
+								    background-repeat: no-repeat;
+								    background-size: cover;
+								    background-position: 50%;
+								}
+							}
+							.entry-category {
+								background-color: $labrys-purple;
+								width: 80%;
+								height: 35px;
+								margin: 0 auto;
+								position: relative;
+								top: -(35px / 2);
+								padding: 5px;
+
+								h3 {
+									margin: 0;
+									font-family: 'Offside';
+									font-size: 20px;
+									font-weight: 300;
+									color: #fff;
+									text-align: center;
+									text-transform: lowercase;
+								}
+							}
+							.entry-inner {
+								padding: 20px 30px;
+							}
+						}
+					}
+				}
+			}
 		}
+
 		@include phone {
 			padding-right: 0;
 			padding-left: 0;
