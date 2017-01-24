@@ -27,6 +27,6 @@ jQuery(document).ready(function($){
 			$('#editais-navigation').addClass('open');
 		}
 	} else {
-		$('body #page .site-inner .site-header nav#site-navigation').css({ top: $(window).height() });
+		$('body #page .site-inner .site-header nav#site-navigation').css({ bottom: $(window).height() });
 	}
 });
