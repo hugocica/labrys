@@ -23,10 +23,10 @@
 
 
 $pagination_suffix = wm_paginated_suffix( 'small', 'post' );
-
+$single_attr = ( is_single() ) ? 'data-single="true"' : '';
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); echo apply_filters( 'wmhook_entry_container_atts', '' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php echo $single_attr; ?> <?php post_class(); echo apply_filters( 'wmhook_entry_container_atts', '' ); ?>>
 
 	<?php
 
@@ -42,7 +42,7 @@ $pagination_suffix = wm_paginated_suffix( 'small', 'post' );
 		$image_size = apply_filters( 'wmhook_entry_featured_image_size', 'thumbnail' );
 		$image_link = ( is_single() ) ? ( wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ) ) : ( array( esc_url( get_permalink() ) ) );
 		$image_link = array_filter( (array) apply_filters( 'wmhook_entry_image_link', $image_link ) );
-		$image_src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), array( 350 ) );
+		$image_src = ( !is_single() ) ? wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'medium' ) : wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
 
 		?>
 

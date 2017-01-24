@@ -32,16 +32,9 @@ $labrys-purple: #7452a2;
 }
 * { box-sizing: border-box; }
 html, body {
-	// @include display-flex;
-	// @include flex-direction(row);
-	// @include align-items(center);
-	// @include justify-content(center);
 	position: relative;
 	margin: 0; 
 	padding: 0;
-	// width: 100%; 
-	// height: 100%;
-	// background-color: #e62878;
 }
 body {
 	background-color: #fff !important;
@@ -268,38 +261,57 @@ body {
 				}
 			}
 			#content {
+				padding: 30px 15px;
+
 				#main {
-					#posts {
-						article {
+					article {
+						box-shadow: none;
+						-webkit-box-shadow: none;
+
+						.entry-media {
+							.post-thumbnail {
+							    height: 270px;
+							    background-repeat: no-repeat;
+							    background-size: cover;
+							    background-position: 50%;
+							}
+						}
+						.entry-category {
+							background-color: $labrys-purple;
+							width: 80%;
+							height: 35px;
+							margin: 0 auto;
+							position: relative;
+							top: -(35px / 2);
+							padding: 5px;
+
+							h3 {
+								margin: 0;
+								font-family: 'Offside';
+								font-size: 20px;
+								font-weight: 300;
+								color: #fff;
+								text-align: center;
+								text-transform: lowercase;
+							}
+						}
+						.entry-inner {
+							padding: 10px 0;
+
+							.entry-header {
+								border-left: 3px solid #333;
+								padding-left: 10px;
+
+								h1 {
+									margin-bottom: 15px;
+								}
+							}
+						}
+						&[data-single=true] {
 							.entry-media {
 								.post-thumbnail {
-								    height: 270px;
-								    background-repeat: no-repeat;
-								    background-size: cover;
-								    background-position: 50%;
+									height: 440px;
 								}
-							}
-							.entry-category {
-								background-color: $labrys-purple;
-								width: 80%;
-								height: 35px;
-								margin: 0 auto;
-								position: relative;
-								top: -(35px / 2);
-								padding: 5px;
-
-								h3 {
-									margin: 0;
-									font-family: 'Offside';
-									font-size: 20px;
-									font-weight: 300;
-									color: #fff;
-									text-align: center;
-									text-transform: lowercase;
-								}
-							}
-							.entry-inner {
-								padding: 20px 30px;
 							}
 						}
 					}
