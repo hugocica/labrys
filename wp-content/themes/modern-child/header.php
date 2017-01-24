@@ -36,6 +36,7 @@
 	wp_head();
 
 ?>
+	<meta name="theme-color" content="#7452a2">
 	<meta property="og:site_name" content="Casa de Labrys">
 	<meta property="og:description" content="Jornalismo colaborativo, com recorte de gênero, raça, classe e sexualidade. Ecoamos nossas vozes contra a invisibilidade lésbica e toda forma de opressão.">
 	<meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png">

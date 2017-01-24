@@ -1287,7 +1287,7 @@
 						$output .= wp_nav_menu( $args );
 						$output .= '<div id="nav-search-form" class="nav-search-form col-md-1">' . get_search_form( false ) . '</div>';
 					$output .= '</div>';
-					$output .= '<button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">' . _x( 'Menu', 'Mobile navigation toggle button title.', 'wm_domain' ) . '</button>';
+					// $output .= '<button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">' . _x( 'Menu', 'Mobile navigation toggle button title.', 'wm_domain' ) . '</button>';
 				$output .= '</nav>';
 				$output .= '<nav id="editais-navigation" class="secondary-navigation main-navigation" role="navigation"' . wm_schema_org( 'SiteNavigationElement' ) . '>';
 					$output .= '<div class="container"><div class="col-md-2"></div>';

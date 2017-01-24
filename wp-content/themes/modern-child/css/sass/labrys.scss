@@ -1,6 +1,29 @@
 // @import "compass/css3";
 
+$phone-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$laptop-width: 1366px;
 $labrys-purple: #7452a2;
+
+@mixin phone {
+	@media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
 
 %bfaf {
 	content: "";
@@ -58,148 +81,214 @@ body {
 
 	#page {
 		.site-inner {
-			nav {
-				&#site-navigation {
-					padding-top: 10px;
-					padding-bottom: 10px;
-					height: 75px;
+			.site-header {
 
-					.main-navigation-inner {
-						#labrys-menu-logo {
-							display: inline-block;
-							vertical-align: middle;
+				nav {
+					&#site-navigation {
+						padding-top: 10px;
+						padding-bottom: 10px;
+						height: 75px;
 
-							svg {
-								// height: 85px;
-								height: 55px;
+						.main-navigation-inner {
+							#labrys-menu-logo {
+								display: inline-block;
+								vertical-align: middle;
+
+								svg {
+									// height: 85px;
+									height: 55px;
+								}
+
+								@include phone {
+									padding-left: 0;
+								}
+							}
+							.menu {
+								display: inline-block;
+								vertical-align: middle;
+
+								li {
+									a {
+										font-size: 20px;
+
+										@include phone {
+											font-size: 15px;
+											padding: 0 5px;
+										}
+									}
+								}
+
+								@include phone {
+									padding: 0;
+								}
+							}
+							#nav-search-form {
+								text-align: right;
+								height: 65px;
+								padding-right: 25px;
+
+								#search-toggle {
+									position: absolute;
+	    							top: 25%;
+	    							font-size: 25px;
+								}
+
+								@include phone {
+									display: none;
+								}
+							}
+							#menu-search-form {
+								position: relative;
+								top: 25%;
+								height: 50px;
+							}
+
+							@include phone {
+								display: block;
+								padding-top: 12px;
+								padding-bottom: 12px;
 							}
 						}
+						@include phone {
+							padding: 0;
+							position: fixed;
+							margin-top: -75px;
+						}
+					}
+					&#editais-navigation {
+						top: 75px;
+						background-color: $labrys-purple;
+						display: none;
+
+						&.open {
+							display: block;
+						}
 						.menu {
-							display: inline-block;
-							vertical-align: middle;
+							// padding: 0 30px;
 
 							li {
 								a {
 									font-size: 20px;
+									line-height: 50px;
 								}
 							}
 						}
-						#nav-search-form {
-							text-align: right;
-							height: 65px;
-							padding-right: 25px;
-
-							#search-toggle {
-								position: absolute;
-    							top: 25%;
-    							font-size: 25px;
-							}
-						}
-						#menu-search-form {
-							position: relative;
-							top: 25%;
-							height: 50px;
-						}
-					}
-				}
-				&#editais-navigation {
-					top: 75px;
-					background-color: $labrys-purple;
-					display: none;
-
-					&.open {
-						display: block;
 					}
 					.menu {
-						// padding: 0 30px;
-
 						li {
+							line-height: 3;
+
+							&.current-menu-item {
+								&:after {
+									@extend %bfaf;
+								}
+							}
 							a {
-								font-size: 20px;
-								line-height: 50px;
+								text-transform: uppercase;
+								font-family: 'Open Sans Condensed';
+								font-weight: 700;
+							}
+							@include phone {
+								display: inline-block;
+								border: none;
 							}
 						}
 					}
 				}
-				.menu {
-					li {
-						line-height: 3;
+				#site-banner {
+					.site-banner-inner {
+						.site-banner-content {
+							height: 688px;
 
-						&.current-menu-item {
-							&:after {
-								@extend %bfaf;
-							}
-						}
-						a {
-							text-transform: uppercase;
-							font-family: 'Open Sans Condensed';
-							font-weight: 700;
-						}
-					}
-				}
-			}
-			#site-banner {
-				.site-banner-inner {
-					.site-banner-content {
-						height: 688px;
-
-						.site-banner-media {
-							height: 800px;
-
-							.site-banner-thumbnail {
+							.site-banner-media {
 								height: 800px;
-								background-repeat: no-repeat;
-								background-size: cover;
-								background-attachment: fixed;
-							}
-						}
-						.site-banner-header {
-						    width: 420px;
-						    margin: 0 auto;
-						    position: relative;
-						    top: 260px;
-						}
-					}
-				}
-			}
-			#content {
-				#main {
-					#posts {
-						article {
-							.entry-media {
-								.post-thumbnail {
-								    height: 270px;
-								    background-repeat: no-repeat;
-								    background-size: cover;
-								    background-position: 50%;
-								}
-							}
-							.entry-category {
-								background-color: $labrys-purple;
-								width: 80%;
-								height: 35px;
-								margin: 0 auto;
-								position: relative;
-								top: -(35px / 2);
-								padding: 5px;
 
-								h3 {
-									margin: 0;
-									font-family: 'Offside';
-									font-size: 20px;
-									font-weight: 300;
-									color: #fff;
-									text-align: center;
-									text-transform: lowercase;
+								.site-banner-thumbnail {
+									height: 800px;
+									background-repeat: no-repeat;
+									background-size: cover;
+									background-attachment: fixed;
+									background-position: 50%;
+
+									@include phone {
+										height: 330px;
+										background-attachment: inherit;
+									}
+								}
+
+								@include phone {
+									height: 330px;
 								}
 							}
-							.entry-inner {
-								padding: 20px 30px;
+							.site-banner-header {
+							    width: 420px;
+							    margin: 0 auto;
+							    position: relative;
+							    top: 260px;
+
+							    @include phone {
+							    	width: 155px;
+							    	top: 190px;
+							    }
+							}
+
+							@include phone {
+								height: 320px;
+							}
+						}
+					}
+
+					@include phone {
+						margin-top: 0;
+					}
+				}
+				#content {
+					#main {
+						#posts {
+							article {
+								.entry-media {
+									.post-thumbnail {
+									    height: 270px;
+									    background-repeat: no-repeat;
+									    background-size: cover;
+									    background-position: 50%;
+									}
+								}
+								.entry-category {
+									background-color: $labrys-purple;
+									width: 80%;
+									height: 35px;
+									margin: 0 auto;
+									position: relative;
+									top: -(35px / 2);
+									padding: 5px;
+
+									h3 {
+										margin: 0;
+										font-family: 'Offside';
+										font-size: 20px;
+										font-weight: 300;
+										color: #fff;
+										text-align: center;
+										text-transform: lowercase;
+									}
+								}
+								.entry-inner {
+									padding: 20px 30px;
+								}
 							}
 						}
 					}
 				}
+				@include phone {
+					padding-right: 0;
+					padding-left: 0;
+				}
 			}
+		}
+		@include phone {
+			padding-right: 0;
+			padding-left: 0;
 		}
 	}
 

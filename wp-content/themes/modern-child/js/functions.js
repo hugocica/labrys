@@ -1,3 +1,6 @@
+var phone_width = 320;
+var tablet_width = 768;
+
 jQuery(document).ready(function($){
 	
 	// search icon animation
@@ -19,7 +22,11 @@ jQuery(document).ready(function($){
 	});
 
 	// show submenu Editoriais
-	if ( $('#site-navigation .menu ul').children('li:first-of-type').hasClass('current-menu-item') ) {
-		$('#editais-navigation').addClass('open');
+	if ( $(window).width() > tablet_width ) {
+		if ( $('#site-navigation .menu ul').children('li:first-of-type').hasClass('current-menu-item') ) {
+			$('#editais-navigation').addClass('open');
+		}
+	} else {
+		$('body #page .site-inner .site-header nav#site-navigation').css({ top: $(window).height() });
 	}
 });
