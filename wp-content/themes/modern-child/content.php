@@ -66,6 +66,12 @@ $single_attr = ( is_single() ) ? 'data-single="true"' : '';
 
 			</figure>
 
+			<?php if ( is_single() ) { ?>
+
+			<div class="gradient-overlay"></div>
+
+			<?php } ?>
+
 		</div>
 
 		<?php
@@ -84,15 +90,13 @@ $single_attr = ( is_single() ) ? 'data-single="true"' : '';
 		}
 	}
 
-	if ( !is_single() ) {
-		?>
+	?>
 
 		<div class="entry-category">
 			<h3><?php echo $cat_name; ?></h3>
 		</div>
 
-		<?php
-	}
+	<?php
 
 	/**
 	 * Post content
