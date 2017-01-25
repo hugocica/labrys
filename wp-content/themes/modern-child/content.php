@@ -48,23 +48,25 @@ $single_attr = ( is_single() ) ? 'data-single="true"' : '';
 
 		<div class="entry-media">
 
-			<figure class="post-thumbnail"<?php echo wm_schema_org( 'image' ); ?> style="background-image: url(<?php echo $image_src[0]; ?>);">
+			<?php
 
-				<?php
+			if ( ! empty( $image_link ) && ! is_single() ) {
+				echo '<a href="' . esc_url( $image_link[0] ) . '" title="' . the_title_attribute( 'echo=0' ) . '">';
+			}
 
-				if ( ! empty( $image_link ) ) {
-					echo '<a href="' . esc_url( $image_link[0] ) . '" title="' . the_title_attribute( 'echo=0' ) . '">';
-				}
+			?>
 
-				// the_post_thumbnail( $image_size );
+				<figure class="post-thumbnail"<?php echo wm_schema_org( 'image' ); ?> style="background-image: url(<?php echo $image_src[0]; ?>);">
 
-				if ( ! empty( $image_link ) ) {
-					echo '</a>';
-				}
+				</figure>
 
-				?>
+			<?php
 
-			</figure>
+			if ( ! empty( $image_link ) && ! is_single() ) {
+				echo '</a>';
+			}
+
+			?>
 
 			<?php if ( is_single() ) { ?>
 
