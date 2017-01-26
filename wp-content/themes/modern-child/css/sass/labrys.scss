@@ -216,13 +216,16 @@ body {
 				#site-banner {
 					.site-banner-inner {
 						.site-banner-content {
-							height: 688px;
+							max-height: 680px;
+							height: 100vh;
 
 							.site-banner-media {
-								height: 800px;
+								max-height: 800px;
+								height: 100vh;
 
+									max-height: 800px;
 								.site-banner-thumbnail {
-									height: 800px;
+									height: 100vh;
 									background-repeat: no-repeat;
 									background-size: cover;
 									background-attachment: fixed;
@@ -242,7 +245,8 @@ body {
 							    width: 420px;
 							    margin: 0 auto;
 							    position: relative;
-							    top: 260px;
+							    // top: 260px;
+							    top: 38vh;
 
 							    @include phone {
 							    	width: 155px;
@@ -321,8 +325,9 @@ body {
 
 							.entry-media {
 								.post-thumbnail {
-									height: 520px;
-									background-attachment: fixed;
+									// height: 520px;
+									height: 75vh;
+									// background-attachment: fixed;
 								}
 								.gradient-overlay {
 									background: linear-gradient(to bottom, rgba(26, 28, 30, 0) 63%, rgba(255, 255, 255, 1) 100%);
@@ -363,6 +368,9 @@ body {
 									    text-transform: none;
 									}
 								}
+								.entry-meta {
+									border: none;
+								}
 							}
 						}
 					}
@@ -399,6 +407,14 @@ body {
     			width: 68%;
     			vertical-align: top;
     		}
+		}
+	}
+	&.is-singular {
+		.content-area {
+			box-shadow: none;
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			-ms-box-shadow: none;
 		}
 	}
 }

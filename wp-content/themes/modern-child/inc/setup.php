@@ -1160,7 +1160,7 @@
 				$args = apply_filters( 'wmhook_wm_navigation_args', array(
 						'theme_location'  => 'primary',
 						'container'       => 'div',
-						'container_class' => 'menu col-md-9',
+						'container_class' => 'menu col-md-8',
 						'menu_class'      => 'menu', //fallback for pagelist
 						'echo'            => false,
 						'items_wrap'      => '<ul>%3$s</ul>',
@@ -1168,7 +1168,7 @@
 				$other_args = apply_filters( 'wmhook_wm_navigation_args', array(
 						'theme_location'  => 'editorial',
 						'container'       => 'div',
-						'container_class' => 'menu col-md-10',
+						'container_class' => 'menu col-md-11',
 						'menu_class'      => 'menu', //fallback for pagelist
 						'echo'            => false,
 						'items_wrap'      => '<ul>%3$s</ul>',
@@ -1179,7 +1179,7 @@
 					$output .= '<span class="screen-reader-text">' . sprintf( __( '%s site navigation', 'wm_domain' ), get_bloginfo( 'name' ) ) . '</span>';
 					$output .= wm_accessibility_skip_link( 'to_content' );
 					$output .= '<div class="main-navigation-inner container">';
-						$output .= '<div id="labrys-menu-logo" class="col-md-2">
+						$output .= '<div id="labrys-menu-logo" class="col-md-1">
 										<a href="'. site_url() .'">
 											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 84.4 95.5" style="enable-background:new 0 0 84.4 95.5;" xml:space="preserve">
@@ -1285,12 +1285,12 @@
 										</a>
 									</div>';
 						$output .= wp_nav_menu( $args );
-						$output .= '<div id="nav-search-form" class="nav-search-form col-md-1">' . get_search_form( false ) . '</div>';
+						$output .= '<div id="nav-search-form" class="nav-search-form col-md-3">' . get_search_form( false ) . '</div>';
 					$output .= '</div>';
 					// $output .= '<button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">' . _x( 'Menu', 'Mobile navigation toggle button title.', 'wm_domain' ) . '</button>';
 				$output .= '</nav>';
 				$output .= '<nav id="editais-navigation" class="secondary-navigation main-navigation" role="navigation"' . wm_schema_org( 'SiteNavigationElement' ) . '>';
-					$output .= '<div class="container"><div class="col-md-2"></div>';
+					$output .= '<div class="container"><div class="col-md-1"></div>';
 						$output .= wp_nav_menu( $other_args );
 					$output .= '</div>';
 				$output .= '</nav>';
@@ -1572,7 +1572,7 @@
 
 							echo wm_post_meta( apply_filters( 'wmhook_wm_entry_top_meta', array(
 									'class' => 'entry-meta entry-meta-top',
-									'meta'  => array( 'edit', 'date', 'likes', 'category', 'author' ),
+									'meta'  => array( 'date', 'likes' ),
 								) ) );
 
 						}

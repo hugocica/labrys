@@ -1,5 +1,7 @@
 var phone_width = 320;
 var tablet_width = 768;
+var desktop_width = 1024;
+var laptop_width = 1366;
 
 jQuery(document).ready(function($){
 	
