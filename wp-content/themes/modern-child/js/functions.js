@@ -29,6 +29,16 @@ jQuery(document).ready(function($){
 		if ( $('#site-navigation .menu ul').children('li:first-of-type').hasClass('current-menu-item') ) {
 			$('#editais-navigation').addClass('open');
 		}
+
+		$('#site-navigation .menu ul').children('li:first-of-type').on({
+			mouseenter: function() {
+				$('#editais-navigation').addClass('open');
+			},
+
+			mouseleave: function() {
+				$('#editais-navigation').removeClass('open');
+			}
+		});
 	} else {
 		// fix the menu navbar to the end of the screen
 		$('body #page .site-inner .site-header nav#site-navigation').css({ bottom: $(window).height() });

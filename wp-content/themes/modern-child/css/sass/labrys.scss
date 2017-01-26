@@ -158,10 +158,15 @@ body {
 					&#editais-navigation {
 						top: 75px;
 						background-color: $labrys-purple;
-						display: none;
+						// display: none;
+						visibility: hidden;
+						opacity: 0;
+						transition: all ease 0.4s;
 
-						&.open {
-							display: block;
+						&.open, &:hover, &:focus {
+							// display: block;
+							visibility: visible;
+							opacity: 1;
 						}
 						.container {
 							.menu {
@@ -385,18 +390,19 @@ body {
 	}
 
 	.site-footer {
-	    background-color: #DCE0DF;
+	    background-color: #000;
 	    
 	    .footer-area-site {
 	    	padding-top: 30px;
 	    	padding-bottom: 20px;
-			background-color: #DCE0DF;
+			background-color: inherit;
 	    }
 		.site-footer-area {
     		.svg-container {
     			display: inline-block;
     			width: 30%;
     			vertical-align: top;
+    			color: #fff;
 
     			svg {
     				width: 80px;
@@ -406,6 +412,7 @@ body {
     			display: inline-block;
     			width: 68%;
     			vertical-align: top;
+    			color: #fff;
     		}
 		}
 	}
@@ -421,6 +428,7 @@ body {
 
 #copyright-container {
 	background-color: #000;
+	border-top: 2px solid #fff;
 	color: #fff;
 	padding: 5px 0;
 
