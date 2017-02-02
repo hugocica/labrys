@@ -78,7 +78,10 @@ function no_category_parents_rewrite_rules($category_rewrite) {
     return $category_rewrite;
 }
 
-// Add 'category_redirect' query variable
+// include metabox files
+include_once get_stylesheet_directory().'/metaboxes/setup.php';
+include_once get_stylesheet_directory().'/metaboxes/labrys-spec.php';
 
+remove_filter('the_content', 'wpautop');
 
 ?>

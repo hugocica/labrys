@@ -122,6 +122,20 @@ $single_attr = ( is_single() ) ? 'data-single="true"' : '';
 
 			wmhook_entry_bottom();
 
+			if ( is_single() ) {
+				$author_id = $post->post_author;
+				$author = get_userdata( $author_id )->data;
+				$avatar = wp_get_attachment_image_src( (int) get_user_meta( $author_id, 'wp_user_avatar', true ) )[0];
+
+				echo '<div class="author-meta col-md-12">
+						<span class="author-name">'. $author->display_name .'</span>
+						<div class="author-info col-md-3">
+							<figure class="author-photo" style="background-image: url('. $avatar .')"></figure>	
+						</div>
+						<div class="author-description col-md-9">'. get_user_meta( $author_id, 'description', true ) .'</div>
+					</div>';
+			}
+
 		echo '</div>';
 
 	?>

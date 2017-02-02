@@ -4,7 +4,8 @@ $phone-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 $laptop-width: 1366px;
-$labrys-purple: #7452a2;
+// $labrys-purple: #7452a2;
+$labrys-purple: #7352A0;
 
 @mixin phone {
 	@media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
@@ -113,7 +114,7 @@ body {
 									}
 
 									@include phone {
-										margin: 0 2em 0 0;
+										// margin: 0 2em 0 0;
 									}
 								}
 
@@ -222,15 +223,15 @@ body {
 					.site-banner-inner {
 						.site-banner-content {
 							max-height: 680px;
-							height: 100vh;
+							height: 75vh;
 
 							.site-banner-media {
 								max-height: 800px;
-								height: 100vh;
+								height: 90vh;
 
 									max-height: 800px;
 								.site-banner-thumbnail {
-									height: 100vh;
+									height: 90vh;
 									background-repeat: no-repeat;
 									background-size: cover;
 									background-attachment: fixed;
@@ -247,11 +248,11 @@ body {
 								}
 							}
 							.site-banner-header {
-							    width: 420px;
+							    width: 320px;
 							    margin: 0 auto;
 							    position: relative;
 							    // top: 260px;
-							    top: 38vh;
+							    top: 40vh;
 
 							    @include phone {
 							    	width: 155px;
@@ -377,8 +378,44 @@ body {
 									border: none;
 								}
 							}
+							.author-meta {
+								border: 2px solid #1B1720;
+							}
 						}
 					}
+
+					.author-meta {
+						position: relative;
+						margin-top: 60px;
+						padding: 30px 15px;
+
+						.author-name {
+							background-color: $labrys-purple;
+							font-family: 'Offside';
+							color: #fff;
+							padding: 3px 12px;
+							position: absolute;
+							z-index: 5;
+							top: -14px;
+							left: 15px;
+						}
+						.author-info {
+							padding: 0;
+
+							.author-photo {
+							    width: 150px;
+								height: 150px;
+							    border-radius: 50%;
+							    background-size: contain;
+							}
+						}
+						.author-description {
+							font-family: 'Roboto Condensed';
+							font-size: 16px;
+							text-align: justify;
+							padding: 0;
+						}
+					}	
 				}
 			}
 		}

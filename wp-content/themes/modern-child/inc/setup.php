@@ -1108,7 +1108,7 @@
 	if ( ! function_exists( 'wm_header_top' ) ) {
 		function wm_header_top() {
 			//Preparing output
-				$output = "\r\n\r\n" . '<header id="masthead" class="site-header container" role="banner"' . wm_schema_org( 'WPHeader' ) . '>' . "\r\n\r\n";
+				$output = "\r\n\r\n" . '<header id="masthead" class="site-header" role="banner"' . wm_schema_org( 'WPHeader' ) . '>' . "\r\n\r\n";
 
 			//Output
 				echo $output;
@@ -1598,7 +1598,7 @@
 
 							echo wm_post_meta( apply_filters( 'wmhook_wm_entry_bottom_meta', array(
 									'class' => 'entry-meta entry-meta-bottom',
-									'meta'  => array( 'edit', 'tags' ),
+									'meta'  => array( 'tags' ),
 								) ) );
 
 						} else {
@@ -1630,7 +1630,8 @@
 							! ( is_page() && is_front_page() )
 							&& ! is_page_template()
 						) {
-						comments_template( '', true );
+						// no more comentários por enquanto
+						// comments_template( '', true );
 					}
 			}
 		} // /wm_entry_after
@@ -1801,6 +1802,7 @@
 		if ( ! function_exists( 'wm_post_nav' ) ) {
 			function wm_post_nav() {
 				//Requirements check
+					return;
 					if ( ! is_singular() || is_page() ) {
 						return;
 					}
