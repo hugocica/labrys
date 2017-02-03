@@ -891,7 +891,11 @@
 
 				//Singular?
 					if ( is_singular() ) {
-						$body_classes['is-singular'] = ++$i;
+						if ( is_page() ) {
+							$body_classes['is-page'] = ++$i;
+						} else {
+							$body_classes['is-singular'] = ++$i;
+						}
 					} else {
 						$body_classes['is-not-singular'] = ++$i;
 					}

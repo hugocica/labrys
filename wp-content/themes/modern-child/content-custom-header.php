@@ -11,10 +11,6 @@
 
 ?>
 
-<?php
-	if ( !is_single() ) {
-?>
-
 <div class="site-banner-content">
 
 	<?php
@@ -37,10 +33,13 @@
 		?>
 
 		<figure class="site-banner-thumbnail" style="background-image: url(<?php echo $image_url?>);">
-
-			
-
 		</figure>
+
+		<?php
+			if ( is_singular() && !is_page() ) {
+		?>
+			<div class="gradient-overlay"></div>
+		<?php } ?>
 
 	</div>
 
@@ -68,7 +67,3 @@
 
 	</div>
 </div>
-
-<?php 
-	} 
-?>

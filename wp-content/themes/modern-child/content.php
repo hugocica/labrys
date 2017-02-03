@@ -37,6 +37,7 @@ $single_attr = ( is_single() ) ? 'data-single="true"' : '';
 			has_post_thumbnail()
 			&& ! $pagination_suffix
 			&& apply_filters( 'wmhook_entry_featured_image_display', true )
+			&& ! is_single()
 		) :
 
 		$image_size = apply_filters( 'wmhook_entry_featured_image_size', 'thumbnail' );
@@ -127,7 +128,7 @@ $single_attr = ( is_single() ) ? 'data-single="true"' : '';
 				$author = get_userdata( $author_id )->data;
 				$avatar = wp_get_attachment_image_src( (int) get_user_meta( $author_id, 'wp_user_avatar', true ) )[0];
 
-				echo '<div class="author-meta col-md-12">
+				echo '<div class="author-meta open">
 						<span class="author-name">'. $author->display_name .'</span>
 						<div class="author-info col-md-3">
 							<figure class="author-photo" style="background-image: url('. $avatar .')"></figure>	
