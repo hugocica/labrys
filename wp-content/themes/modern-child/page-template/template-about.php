@@ -41,10 +41,10 @@ get_header();
 				foreach ( $colabrys as $colab ) {
 					$avatar = wp_get_attachment_image_src( (int) get_user_meta( $colab->ID, 'wp_user_avatar', true ) )[0];
 					echo '<div class="author-meta grid-item">
+							<span class="author-name">'. $colab->display_name .'</span>
 							<div class="hover-box">
 								<span class="outter-hover-wrapper">
 									<span class="inner-hover-wrapper">
-										<span class="author-name">'. $colab->display_name .'</span>
 										<div class="author-info col-md-3">
 											<figure class="author-photo" style="background-image: url('. $avatar .')"></figure>	
 										</div>
