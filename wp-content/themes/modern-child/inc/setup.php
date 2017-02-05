@@ -1296,6 +1296,11 @@
 				$output .= '<nav id="editais-navigation" class="secondary-navigation main-navigation" role="navigation"' . wm_schema_org( 'SiteNavigationElement' ) . '>';
 					$output .= '<div class="container"><div class="col-md-1"></div>';
 						$output .= wp_nav_menu( $other_args );
+						$output .= '<div class="close-btn">
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 21.9 21.9" enable-background="new 0 0 21.9 21.9" width="100%" height="100%">
+										  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z" fill="#FFFFFF"/>
+										</svg>
+									</div>';
 					$output .= '</div>';
 				$output .= '</nav>';
 
@@ -1609,7 +1614,7 @@
 
 							echo wm_post_meta( apply_filters( 'wmhook_wm_entry_bottom_meta', array(
 									'class'       => 'entry-meta',
-									'meta'        => array( 'date', 'comments', 'likes' ),
+									'meta'        => array( 'author', 'likes' ),
 									'date_format' => 'j M Y',
 								) ) );
 
@@ -1788,7 +1793,7 @@
 			 */
 			if ( ! function_exists( 'wm_excerpt_continue_reading' ) ) {
 				function wm_excerpt_continue_reading( $continue ) {
-					return '<div class="link-more"><a href="' . esc_url( get_permalink() ) . '">' . sprintf( __( 'Continue reading%s&hellip;', 'wm_domain' ), '<span class="screen-reader-text"> "' . get_the_title() . '"</span>' ) . '</a></div>';
+					return '<div class="link-more"><a href="' . esc_url( get_permalink() ) . '">' . sprintf( __( 'Leia mais', 'wm_domain' ), '<span class="screen-reader-text"> "' . get_the_title() . '"</span>' ) . '</a></div>';
 				}
 			} // /wm_excerpt_continue_reading
 

@@ -560,7 +560,7 @@
 									$replacements = array(
 											'{attributes}' => wm_schema_org( 'Person' ),
 											'{class}'      => 'author vcard entry-meta-element',
-											'{content}'    => '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" class="url fn n" rel="author"' . wm_schema_org( 'author' ) .'>' . get_the_author() . '</a>',
+											'{content}'    => 'Por <a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" class="url fn n" rel="author"' . wm_schema_org( 'author' ) .'>' . get_the_author() . '</a>',
 										);
 								}
 

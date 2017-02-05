@@ -128,7 +128,7 @@ $single_attr = ( is_single() ) ? 'data-single="true"' : '';
 				$author = get_userdata( $author_id )->data;
 				$avatar = wp_get_attachment_image_src( (int) get_user_meta( $author_id, 'wp_user_avatar', true ) )[0];
 
-				echo '<div class="author-meta open grid-item">
+				echo '<div class="author-meta open">
 						<span class="author-name">'. $author->display_name .'</span>
 						<div class="hover-box">
 							<span class="outter-hover-wrapper">

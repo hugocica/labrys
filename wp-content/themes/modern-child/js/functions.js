@@ -4,7 +4,6 @@ var desktop_width = 1024;
 var laptop_width = 1366;
 
 jQuery(document).ready(function($){
-	
 	// search icon animation
 	var $wrap = $('[js-ui-search]');
 	var $close = $('[js-ui-close]');
@@ -42,6 +41,12 @@ jQuery(document).ready(function($){
 	} else {
 		// fix the menu navbar to the end of the screen
 		$('body #page .site-inner .site-header nav#site-navigation').css({ bottom: $(window).height() });
+
+		// mobile editoriais menu close button
+		$('#editais-navigation .container .close-btn').bind('click', function() {
+			$(this).parent().parent().removeClass('open');
+			console.log('teste');
+		});
 
 		$('#site-navigation .menu ul').children('li:first-of-type')
 									  .removeClass('current-menu-item')

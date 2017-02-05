@@ -31,6 +31,12 @@ function labrys_enqueue_scripts() {
         wp_get_theme()->get('Version'), 
         true
     );
+    wp_enqueue_script( 'isotopejs', 
+        get_stylesheet_directory_uri() . '/js/isotope.pkgd.min.js', 
+        array ( 'jquery' ), 
+        wp_get_theme()->get('Version'), 
+        true
+    );
 }
 
 
@@ -82,6 +88,6 @@ function no_category_parents_rewrite_rules($category_rewrite) {
 include_once get_stylesheet_directory().'/metaboxes/setup.php';
 include_once get_stylesheet_directory().'/metaboxes/labrys-spec.php';
 
-remove_filter('the_content', 'wpautop');
+// remove_filter('the_content', 'wpautop');
 
 ?>
