@@ -305,6 +305,16 @@ body {
 							    	width: 155px;
 							    	top: 190px;
 							    }
+							    &.highlight-box {
+									border: 2px solid #fff;
+									padding: 25px 35px;
+									width: 525px;
+
+									p {
+										font-family: Offside;
+										font-size: 26px;
+									}
+							    }
 							}
 
 							@include phone {
@@ -392,8 +402,11 @@ body {
 								}
 							}
 							.entry-content {
-								min-height: 100px;
-
+								min-height: 125px;
+								
+								h3 {
+									margin: 45px 0;
+								}
 								.link-more {
 									text-transform: uppercase;
 									position: absolute;
@@ -479,6 +492,10 @@ body {
 					.colabrys-box {
 						padding: 0;
 						margin-left: -15px;
+
+						.section-title {
+							margin: 25px 0;
+						}
 					}
 					.author-meta {
 						position: relative;

@@ -19,6 +19,7 @@
 	 * Media
 	 */
 
+		$highlight_box = get_post_meta( get_the_ID(), '_highlight_metabox', true );
 	?>
 
 	<div class="site-banner-media">
@@ -43,7 +44,7 @@
 
 	</div>
 
-	<div class="site-banner-header">	
+	<div class="site-banner-header <?php echo ( !is_front_page() && !empty( $highlight_box ) ) ? 'highlight-box' : '' ; ?>">	
 	
 	<?php
 		if ( is_front_page() ) {
@@ -53,8 +54,6 @@
 
 	<?php
 		} else {
-			$highlight_box = get_post_meta( get_the_ID(), '_highlight_metabox', true );
-
 			if ( ! empty($highlight_box['destaque']) ) {
 	?>
 	
