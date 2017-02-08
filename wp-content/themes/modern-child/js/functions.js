@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
 		});
 	} else {
 		// fix the menu navbar to the end of the screen
-		$('body #page .site-inner .site-header nav#site-navigation').css({ 'bottom': $(window).height() });
+		$('#site-navigation').css({ 'bottom': $(window).height() });
 
 		var floatingMenuPosition = $(window).height() - $('body #page .site-inner .site-header nav#site-navigation').height() - ( $('body #page .site-inner .site-header nav#editais-navigation .container .menu').height() );
 		$('body #page .site-inner .site-header nav#editais-navigation .container').css({ 'margin-top': -floatingMenuPosition });

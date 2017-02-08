@@ -25,7 +25,7 @@
 	<div class="site-banner-media">
 
 		<?php
-			if ( is_front_page() || empty(get_post_thumbnail_id( get_the_ID() )) ) {
+			if ( is_front_page() || empty(get_post_thumbnail_id( get_the_ID() )) || is_category() ) {
 				$image_url = get_header_image();
 			} else {
 				$image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
@@ -47,7 +47,7 @@
 	<div class="site-banner-header <?php echo ( !is_front_page() && !empty( $highlight_box ) ) ? 'highlight-box' : '' ; ?>">	
 	
 	<?php
-		if ( is_front_page() ) {
+		if ( is_front_page() || ( is_category() && empty($highlight_box['destaque']) ) ) {
 	?>
 				
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/casa-labrys.png" title="Casa de Labrys" alt="Casa de Labrys">	

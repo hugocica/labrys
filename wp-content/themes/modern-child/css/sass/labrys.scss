@@ -309,10 +309,21 @@ body {
 									border: 2px solid #fff;
 									padding: 25px 35px;
 									width: 525px;
+									top: 38vh;
 
 									p {
 										font-family: Offside;
 										font-size: 26px;
+										margin-bottom: 0;
+
+										@include phone {
+											font-size: 18px;
+										}
+									}
+									@include phone {
+										padding: 15px 10px;
+										width: 100%;
+										top: 28vh;
 									}
 							    }
 							}
@@ -454,6 +465,7 @@ body {
 							    background-color: #fff;
 							    padding: 60px 15px;
 							    max-width: 100%;
+							    margin-left: -15px;
 
 							    .entry-header {
 									border-left: none;
@@ -502,6 +514,7 @@ body {
 						margin-top: 60px;
 						padding: 0 15px;
 						width: 25%;
+						height: 225px;
 						float: left;
 						transition: all ease 0.5s;
 
