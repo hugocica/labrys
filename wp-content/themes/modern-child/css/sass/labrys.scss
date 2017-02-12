@@ -13,8 +13,14 @@ $labrys-purple: #7352A0;
 	}
 }
 
-@mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+@mixin tablet-portrait {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (orientation : portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (orientation : landscape) {
     @content;
   }
 }
@@ -146,7 +152,11 @@ body {
 								top: 25%;
 								height: 50px;
 							}
-
+							@include tablet-portrait {
+								display: block;
+								padding-top: 12px;
+								padding-bottom: 12px;
+							}
 							@include phone {
 								display: block;
 								padding-top: 12px;
@@ -422,7 +432,7 @@ body {
 									text-transform: uppercase;
 									position: absolute;
 									right: 0;
-									bottom: 0;
+									bottom: 4px;
 
 									a {
 										color: $labrys-purple;
@@ -502,6 +512,15 @@ body {
 						}
 					}
 					
+					.page-header {
+						margin-top: 0;
+
+						.page-title {
+							background-color: $labrys-purple;
+							padding: 15px 0;
+						}
+					}
+
 					.colabrys-box {
 						padding: 0;
 						margin-left: -15px;
