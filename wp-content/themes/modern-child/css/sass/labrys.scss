@@ -102,7 +102,10 @@ body {
 									// height: 85px;
 									height: 55px;
 								}
-
+								
+								@include tablet-portrait {
+									padding-left: 0;
+								}
 								@include phone {
 									padding-left: 0;
 								}
@@ -117,6 +120,10 @@ body {
 									a {
 										font-size: 20px;
 
+										@include tablet-portrait {
+											font-size: 15px;
+											padding: 0 5px;
+										}
 										@include phone {
 											font-size: 15px;
 											padding: 0 5px;
@@ -213,13 +220,20 @@ body {
 									a {
 										font-size: 20px;
 										line-height: 50px;
-
+										
+										@include tablet-portrait {
+											padding-top: 0;
+											padding-bottom: 0;
+										}
 										@include phone {
 											padding-top: 0;
 											padding-bottom: 0;
 										}
 									}
-
+									
+									@include tablet-portrait {
+										display: block;
+									}
 									@include phone {
 										display: block;
 									}
@@ -287,6 +301,10 @@ body {
 								text-transform: uppercase;
 								font-family: 'Open Sans Condensed';
 								font-weight: 700;
+							}
+							@include tablet-portrait {
+								display: inline-block;
+								border: none;
 							}
 							@include phone {
 								display: inline-block;
@@ -362,6 +380,9 @@ body {
 										width: 100%;
 										top: 28vh;
 									}
+							    }
+							    img {
+							    	transform: scaleX(1) !important;
 							    }
 							}
 
