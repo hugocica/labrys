@@ -48,7 +48,6 @@ jQuery(document).ready(function($){
 		// mobile editoriais menu close button
 		$('#editais-navigation .container .close-btn').bind('click', function() {
 			$(this).parent().parent().removeClass('open');
-			console.log('teste');
 		});
 
 		$('#site-navigation .menu ul').children('li:first-of-type')

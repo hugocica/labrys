@@ -105,7 +105,7 @@ $single_attr = ( is_single() ) ? 'data-single="true"' : '';
 	 * Post content
 	 */
 
-		echo '<div class="entry-inner">';
+		echo '<div class="entry-inner col-md-12">';
 
 			wmhook_entry_top();
 

@@ -26,7 +26,7 @@ get_header();
 		}
 
 		$colab_args = array(
-				'role__in' => array( 'administrator', 'editor', 'author', 'contributor' )
+				'role__in' => array( 'editor', 'author', 'contributor' )
 			);
 
 
@@ -36,7 +36,7 @@ get_header();
 		<section class="colabrys-box container">
 			<h3 class="section-title">Colaboradoras</h3>
 
-			<div class="grid">
+			<div class="grid col-md-12" style="padding: 0;">
 			<?php
 				foreach ( $colabrys as $colab ) {
 					$avatar = wp_get_attachment_image_src( (int) get_user_meta( $colab->ID, 'wp_user_avatar', true ) )[0];
@@ -82,18 +82,18 @@ get_header();
 			//   	});
 			// });
 
-			$('.author-meta.grid-item').click(function() {
-				if ( $(this).hasClass('open') ) {
-					$(this).removeClass('open').addClass('closed');
-				} else if ( $(this).hasClass('closed') ) {
-					$(this).removeClass('closed').addClass('open');
-				}
+			// $('.author-meta.grid-item').click(function() {
+			// 	if ( $(this).hasClass('open') ) {
+			// 		$(this).removeClass('open').addClass('closed');
+			// 	} else if ( $(this).hasClass('closed') ) {
+			// 		$(this).removeClass('closed').addClass('open');
+			// 	}
 
 				// $container.isotope({
 			 //    	// update columnWidth to a percentage of container width
 			 //    	masonry: { columnWidth: $container.width() / 4 }
 			 //  	});
-			});
+			// });
 		});
 	</script>
 
