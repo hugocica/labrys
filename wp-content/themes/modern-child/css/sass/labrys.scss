@@ -538,7 +538,11 @@ body {
 									    @include phone {
 									    	font-size: 36px;
 									    	line-height: 36px;
+									    	margin-bottom: 20px;
 									    }
+									}
+									@include phone {
+										margin-bottom: 0;
 									}
 								}
 								.entry-meta {
@@ -806,6 +810,9 @@ body {
 							padding: 0;
 							visibility: hidden;
 							opacity: 0;
+						}
+						@include phone {
+							height: 100%;
 						}
 					}	
 				}
