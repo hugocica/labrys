@@ -11,6 +11,12 @@
 
 ?>
 
+<?php
+	
+	if ( !is_search() ) {
+
+?>
+
 <div class="site-banner-content">
 
 	<?php
@@ -66,3 +72,9 @@
 
 	</div>
 </div>
+
+<?php
+
+	}
+
+?>
