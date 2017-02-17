@@ -444,6 +444,7 @@ body {
 							font-family: Roboto Condensed;
 							font-size: 16px;
 							position: relative;
+							height: 250px;
 
 							.entry-header {
 								border-left: 3px solid #333;
@@ -452,6 +453,7 @@ body {
 
 								h1 {
 									margin-bottom: 15px;
+									font-size: 24px;
 								}
 								a {
 									transition: all ease 0.3s;
@@ -566,6 +568,7 @@ body {
 					
 					.page-header {
 						margin-top: 0;
+						border: none;
 
 						.page-title {
 							background-color: $labrys-purple;
@@ -781,7 +784,7 @@ body {
 							top: -14px;
 							left: 0;
 							border: 1px solid #939D9D;
-							width: 79%;
+							width: 70%;
 							margin-left: 15%;
 							text-align: center;
 							transition: inherit;
@@ -815,6 +818,20 @@ body {
 							height: 100%;
 						}
 					}	
+					.no-results {
+						color: #000;
+						
+						.page-header {
+							border: none;
+
+							.page-title {
+								background-color: transparent;
+								color: $labrys-purple;
+								font-family: Roboto Condensed;
+								text-transform: capitalize;
+							}
+						}
+					}
 				}
 			}
 		}
